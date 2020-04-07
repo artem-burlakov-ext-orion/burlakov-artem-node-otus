@@ -1,12 +1,3 @@
-// const obj = { 
-//   "name": 1, 
-//   "items": [{ "name": 2, "items": [{ "name": 3 }, { "name": 4 }]}, { "name": 5, "items": [{ "name": 6 }]}]
-// };
-
-
-
-
-
 const buildTree = (root) => {
   const iter = (n, currentDepth, acc) => { 
     const { name, items } = n;
@@ -23,4 +14,4 @@ const buildTree = (root) => {
   return iter(root, -1, ``);
   }
   
-console.log(buildTree(obj));
+module.exports = buildTree;
