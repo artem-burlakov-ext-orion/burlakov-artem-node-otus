@@ -9,8 +9,8 @@ const buildTree = (root) => {
       return acc;
     }
     return items.reduce((cAcc, nn) => iter(nn, curDepth + 1, cAcc), acc);
-    }  
+  }  
   return iter(root, -1, '');
-  }
+}
   
 module.exports = buildTree;
