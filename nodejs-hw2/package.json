@@ -1,0 +1,23 @@
+{
+  "name": "burlakov-artem-nodejs-hw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js tree.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eifory/burlakov-artem-node-otus.git"
+  },
+  "author": "Burlakov Artem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eifory/burlakov-artem-node-otus/issues"
+  },
+  "homepage": "https://github.com/eifory/burlakov-artem-node-otus#readme",
+  "dependencies": {
+    "commander": "^5.0.0"
+  }
+}
