@@ -1,6 +1,7 @@
 const program = require('commander');
 const getDirTree  = require('./buildTree');
 
+
 const showTree = () => {
   program
     .version('0.0.1')
@@ -10,6 +11,7 @@ const showTree = () => {
     .action((dirPath, depth) => {
       console.log(getDirTree(dirPath, depth));
     })
-  }
+  return program.parse(process.argv);
+}
 
 module.exports = showTree;

@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "tree": "/bin/tree.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js tree.json"
+    "start": "node index.js tree.json",
+    "publish": "npm publish --dry-run"
   },
   "repository": {
     "type": "git",
