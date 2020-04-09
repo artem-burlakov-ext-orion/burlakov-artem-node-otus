@@ -4,26 +4,20 @@ Show directory as a tree
 
 example:
 ```
-
+tree ../nodejs-hw2 --depth 2
 ```
 result:
 ```
 nodejs-hw2
 └──.gitignore
 └──README.md
-└──buildTree.js
+└──bin
+   └──tree.js
+└──getDirTree.js
 └──node_modules
    └──commander
-      └──CHANGELOG.md
-      └──LICENSE
-      └──Readme.md
-      └──index.js
-      └──package.json
-      └──typings
-         └──index.d.ts
 └──package-lock.json
 └──package.json
-└──tree.js
 └──util.js
 ```
 
