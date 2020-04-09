@@ -6,7 +6,7 @@ const toChildSymbol = '└──';
 const getDirTree = (dirName, depth) => {
   const fullPath = (path.isAbsolute(dirName)) ? dirName : path.join(__dirname, dirName);
   const iter = (elem, curDepth, acc) => { 
-    if (curDepth > depth) {
+    if (curDepth > depth -1) {
       return acc;
     }
     const beforeValue = (curDepth === -1) ? '' : ' '.repeat(curDepth * toChildSymbol.length) + toChildSymbol;

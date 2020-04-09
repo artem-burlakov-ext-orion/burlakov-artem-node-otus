@@ -31,6 +31,13 @@ How to use
 
 ```
 git clone https://github.com/eifory/burlakov-artem-node-otus.git
-npm start                                                           # show example directory as a tree
-npm start path_to_your_directory                                    # show your directory as a tree
+cd nodejs-hw2
+npm publish --dry-run
+npm link                                                      
+
+tree <your_directory_path>  [option]    # show your directory as a tree with 
+
+option:
+  -V, --version                         #output the version number
+  -d, --depth                           #show  all the directories down to a specified level
 ```

@@ -1,6 +1,5 @@
 const program = require('commander');
-const getDirTree  = require('./buildTree');
-
+const getDirTree  = require('./getDirTree');
 
 const showTree = () => {
   program
@@ -8,10 +7,10 @@ const showTree = () => {
     .description('show directories and files as tree')
     .option('-d, --depth [depth]', 'output depth format')
     .arguments('[dirPath]')
-    .action((dirPath, depth) => {
-      console.log(getDirTree(dirPath, depth));
+    .action((dirPath) => {
+      console.log(getDirTree(dirPath, program.depth));
     })
-  return program.parse(process.argv);
+    .parse(process.argv);
 }
 
 module.exports = showTree;

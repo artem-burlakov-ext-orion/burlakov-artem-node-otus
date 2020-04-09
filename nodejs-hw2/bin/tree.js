@@ -2,5 +2,4 @@
 
 const showTree = require('../util.js');
 
-
 showTree();
