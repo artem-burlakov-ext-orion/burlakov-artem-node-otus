@@ -6,11 +6,11 @@ const toChildSymbol = '└──';
 const getDirTree = (dirName, depth) => {
   const fullPath = (path.isAbsolute(dirName)) ? dirName : path.join(__dirname, dirName);
   const iter = (elem, curDepth, acc) => { 
-    if (curDepth > depth -1) {
+    if (curDepth + 1 > depth) {
       return acc;
     }
     const beforeValue = (curDepth === -1) ? '' : ' '.repeat(curDepth * toChildSymbol.length) + toChildSymbol;
-    acc += `${beforeValue}${path.basename(elem)}\n`;
+    acc = `${acc}${beforeValue}${path.basename(elem)}\n`;
     const stats = fs.statSync(elem);
     if (stats.isFile()) {
       return acc;
