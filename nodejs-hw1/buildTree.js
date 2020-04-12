@@ -4,7 +4,7 @@ const buildTree = (root) => {
   const iter = (n, curDepth, acc) => { 
     const { name, items } = n;
     const beforeValue = (curDepth === -1) ? '' : ' '.repeat(curDepth * toChildSymbol.length) + toChildSymbol;
-    acc += `${beforeValue}${name}\n`;
+    acc = `${acc}${beforeValue}${name}\n`;
     if (!items) {
       return acc;
     }
