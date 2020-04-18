@@ -7,7 +7,8 @@
     "tree": "/bin/tree.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
     "publish": "npm publish --dry-run"
   },
   "repository": {
@@ -19,8 +20,14 @@
   "bugs": {
     "url": "https://github.com/eifory/burlakov-artem-node-otus/issues"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "homepage": "https://github.com/eifory/burlakov-artem-node-otus#readme",
   "dependencies": {
     "commander": "^5.0.0"
+  },
+  "devDependencies": {
+    "jest": "^25.3.0"
   }
 }
