@@ -15,6 +15,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
+  - npx eslint .
   - npm test
   - npm run test-coverage
 

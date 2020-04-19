@@ -32,12 +32,12 @@
 
 
 
-async function main() {
+// async function main() {
   
-  for await (const chunk of readStream) {
-    console.log('>>> '+chunk);
-  }
-  console.log('### DONE ###');
-}
+//   for await (const chunk of readStream) {
+//     console.log('>>> '+chunk);
+//   }
+//   console.log('### DONE ###');
+// }
 
-main();
+// main();
