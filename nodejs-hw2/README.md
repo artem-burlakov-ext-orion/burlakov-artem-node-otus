@@ -1,6 +1,4 @@
-# burlakov-artem-node-otus
-
-Show directory as a tree
+# show directory as a tree
 
 example:
 ```
