@@ -2,16 +2,17 @@ const fs = require('fs');
 const path = require('path');
 const getDirTree = require('../getDirTree');
 
-const fixturePath = path.join(__dirname, '..', '/__fixtures__/');
-const testDepth = 2;
+const examplePath = path.join(__dirname, '..', '/__fixtures__/', '/example/');
 
-test('getDirTree without argument depth', () => {
-  const expected = fs.readFileSync(path.join(fixturePath, 'result-without-arg'), 'utf8');
-  expect(getDirTree(fixturePath)).toBe(expected);
+const exampleDepth = 2;
+
+test('hw5---getDirTree without argument depth', () => {
+  const expected = fs.readFileSync(path.join(examplePath, 'result-without-arg'), 'utf8');
+  expect(getDirTree(examplePath)).toBe(expected);
 })
 
-test('getDirTree with argument depth = 2', () => {
-  const expected = fs.readFileSync(path.join(fixturePath, 'result-with-arg-2'), 'utf8');
-  expect(getDirTree(fixturePath, testDepth)).toBe(expected);
+test('hw5---getDirTree with argument depth = 2', () => {
+  const expected = fs.readFileSync(path.join(examplePath, 'result-with-arg-2'), 'utf8');
+  expect(getDirTree(examplePath, exampleDepth)).toBe(expected);
 })
 
