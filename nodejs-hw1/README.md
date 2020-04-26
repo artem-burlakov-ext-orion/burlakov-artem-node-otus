@@ -1,6 +1,4 @@
-# burlakov-artem-node-otus
-
-Show .json as a tree
+# show .json as a tree
 
 example:
 ```

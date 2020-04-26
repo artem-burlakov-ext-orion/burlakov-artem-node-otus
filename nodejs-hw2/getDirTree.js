@@ -5,7 +5,14 @@ const toChildSymbol = '└──';
 
 const getDirTree = (dirName, depth) => {
   const fullPath = (path.isAbsolute(dirName)) ? dirName : path.join(__dirname, dirName);
-  const iter = (elem, curDepth, acc) => { 
+
+  try {
+    fs.statSync(fullPath);
+  } catch (err) {
+    throw new Error('No such file or directory')
+  }
+  
+  const iter = (elem, curDepth, acc) => {
     if (curDepth + 1 > depth) {
       return acc;
     }
