@@ -5,14 +5,6 @@ const courseSchema = new Schema({
     type: String,
     required: true
   },
-  start: {
-    type: Date,
-    required: true
-  },
-  finish: {
-    type: Date,
-    required: true
-  },
   speaker: {
     type: Schema.Types.ObjectId,
     ref: 'Speaker',
@@ -27,6 +19,19 @@ const courseSchema = new Schema({
     ref: 'Category',
     required: true
   },
+  lessons: [
+    {
+      number: {
+        type: Number,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      },
+    }
+  ]
+  
 });
 
 module.exports = model('Course', courseSchema);

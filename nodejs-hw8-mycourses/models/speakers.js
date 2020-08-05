@@ -1,18 +1,18 @@
 const { Schema, model } = require('mongoose');
 
-const schema = new Schema({
-  name: {
+const speakerSchema = new Schema({
+  firstName: {
     type: String,
     required: true
   },
-  surname: {
+  lastName: {
     type: String,
     required: true
   },
   skill: {
-    type: String,
+    type: [String],
     required: true
   }
 });
 
-module.exports = model('Speaker', schema);
+module.exports = model('Speaker', speakerSchema);
